@@ -1,64 +1,80 @@
-.leftSide
-{
- height: 100px; width: 100px; margin: 0;
-},
+
 .header{
-  height: 100px; width: 100px; margin: 0; padding: 20px;
+  height: 100px;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  position: sticky;
+  color: #ffffff;
+  background: #F98866;
+  text-align: center;
+}
+.innercol9Item
+{
+  height: fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  opacity: 0.6;
+  padding: 30px;
+  border-radius: 30px;
+  border: 20px;
+}
+.centerItem
+{
+  float: none;
+  display: grid;
+}
+.tech
+{
+ height: fit-content;
+ width: fit-content;
+ padding: 5px;
+}
+
+.profilePic
+{
+  align-items:center;
+  height: fit-content;
+  width: fit-content;
+}
+.ppimg
+{
+  border-width: 20px;
+  border-radius: 500px;
+  height: auto;
+  width: 300px;
 }
 .img
 {
-  width:200px;height:200px;
+  width:100px;height:100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.col4Item
+{
+  padding: 50px 20px 20px 20px;
+  background: #80BD9E;
+}
+.col9Item
+{
   width: 100%;
-  background-color: red;
-  color: white;
+  padding: 20px;
+  background : #FF420E;
+}
+.myCards
+{
+  height: 80px;
+  width: 80px;
+}
+.footer
+{
+  height: fit-content;
+  width: 100%;;
   text-align: center;
-}
-.flipcard {
-  background-color: transparent;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flipcardinner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flipcard:hover .flipcardinner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flipcardfront, .flipcardback {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flipcardfront {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flipcardback {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
+  padding: 60px;
+  flex: 1;
+  flex-direction: column;
+  background:#89DA59;
 }

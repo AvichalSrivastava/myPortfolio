@@ -41,13 +41,5 @@
   "main": "index.js",
   "devDependencies": {},
   "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AvichalSrivastava/myPortfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/AvichalSrivastava/myPortfolio/issues"
-  },
-  "homepage": "https://github.com/AvichalSrivastava/myPortfolio#readme"
+  "license": "ISC"
 }
