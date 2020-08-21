@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col} from 'reactstrap';
-import Varient from './Animation/Varient';
 import Card from './Common/Card';
-//import "./Animation/styles.css";
-import profilePic from '../Pic/profilePic.png'
 import java from '../Pic/java.png'
 import express from '../Pic/express.jpg'
 import jenkins from '../Pic/jenkins.png'
@@ -20,133 +16,224 @@ import postgres from '../Pic/postgres.jpg'
 import react from '../Pic/react.jpg'
 import reactNative from '../Pic/reactNative.png'
 import redux from '../Pic/redux.jpg'
-
 import 'tachyons';
 import "tachyons/css/tachyons.min.css";
 import "./common.css";
+import "./newComm.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ParticleContainer from './ParticleContainer';
+import Manager from "../AndroidApps/Manager.apk";
 class Body extends Component
 {
   renderDev()
   {
-    const dev = [bash, bootstrap, cSharp, express, firebase, java, git, jquery, maven, mongo, node, postgres, react, reactNative, redux]
+    const dev = [bash, bootstrap, cSharp, express, firebase, java, git, jquery, maven, mongo, node, postgres, react, reactNative, redux, jenkins]
      const Items = dev.map(item => <Card img={item}/> );
      return(Items);
   }
+  componentDidMount () {
+    const script = document.createElement("script");
+
+    script.src = "https://use.typekit.net/foobar.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+}
+  
   render()
   {
     return (
-      <div className="centerItem">
-         <div className="bg-dark-white fr flex-1">
+      <div>
+        <div className="Particle">
+          <ParticleContainer/>
+        </div>
+       
+        <div className="centerItem">
+          <div className="fr flex-1">
+          
+          
+                <div className="innercol9Item">
+                  <div className="container-fluid p-0">
+                    <section className="resume-section" id="about">
+                          <div className="resume-section-content">
+                              <h1 className="mb-0">
+                                  Avichal
+                                  <span className="text-primary">Srivastava</span>
+                              </h1>
+                              <div className=" mb-5">
+                                  U-Block, DLF phase3, Gurugram ,8357849520
+                                  <a href="srivastava.svichal@gmail.com">, avichalsrivastava@gmail.com</a>
+                              </div>
+                              <p className="lead mb-5">Proactive, talented communicator well-versed in all aspects of software development. Results-oriented with more than 1.5 years of experience in IT industry. Solidifies client relations and growth through improved workflows and enhanced features. I currently work as App developer but looking for a full stack field where i can sharpen my client as well as backend skills.</p>
+                              <div className="social-icons">
+                                  <a className="social-icon" href="https://www.linkedin.com/in/avichalsrivastava/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+                                  <a className="social-icon" href="https://github.com/AvichalSrivastava" target="_blank"><i className="fab fa-github"></i></a>
+                                  <a className="social-icon" href="https://stackoverflow.com/users/12774726/avichal-srivastava/" target="_blank"><i className="fab fa-stack-overflow"></i></a>
+                                  <a className="social-icon" href="https://www.instagram.com/avichal_srivastav/?hl=en" target="_blank"><i className="fab fa-instagram"></i></a>
+                              </div>
+                          </div>
+                      </section>
+                     <hr className="m-0" />
+                      <section className="resume-section" id="education">
+                          <div className="resume-section-content">
+                              <h2 className="mb-5">Experience</h2>
+                              <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
+                                  <div className="flex-grow-1">
+                                      <h3 className="mb-0">Adda 52 Poker</h3>
+                                      <div className="subheading mb-3">India's first and largest online Poker gaming app and website</div>
+                                      <span className="text-primary">Software Engineer</span>
+                                  </div>
+                                  <div className="flex-shrink-0"><span className="text-primary">Feb 2019 - Current</span></div>
+                              </div>
+                          </div>
+                      </section>
+                      <hr className="m-0" />
+                      <section className="resume-section" id="experience">
+                          <div className="resume-section-content">
+                              <h2 className="mb-5">My Projects</h2>
+                              <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
+                                  <div className="flex-grow-1">
+                                      <h3 className="mb-0">Manager app (Android)</h3>
+                                      <div className="subheading mb-3">React Native app with Redux framework that uses Firebase authentication and firebase real time database for login and data store purposes.</div>
+                                      <p>The theme of the app is , it is a manager - employee app. Where managers can create there employee records and can schedule them for working days accordingly. Manager can add, fire, schedule his working day and message them the schedule respectively.</p>
+                                     <a href="https://github.com/AvichalSrivastava/EmployeeManagerApp" target="_blank">FIND GIT CODE HERE -</a>
+                                     <a  href={Manager} download>- Download the app</a>
+                                  </div>
+                                  <div className="flex-shrink-0"><span className="text-primary">React-Native</span></div>
+                              </div>
+                              <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
+                                  <div className="flex-grow-1">
+                                      <h3 className="mb-0">Chatting web app</h3>
+                                      <div className="subheading mb-3">It is a combination of Express server and Socket.io</div>
+                                      <p>This web app is a chatting app which allows you to broadcast your message to every connected client. So now you can chat and express your feelings without thinking of your identity. By the way, it better works with desktop or laptop.</p>
+                                      <p><span className="text-primary">Open the website in 2 tabs into your browser. Start messaging from one tab, the other tab will be receiving your message and vice-versa.</span></p>
+                                      <a href="https://github.com/AvichalSrivastava/ChattingAppServer" target="_blank">FIND GIT CODE HERE -</a>
+                                     <a  href="https://kayasthchattingapp.herokuapp.com/" target="_blank">- Open website here.</a>
+                                  </div>
+                                  <div className="flex-shrink-0"><span className="text-primary">Express and Socket.io</span></div>
+                              </div>
+                              <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
+                                  <div className="flex-grow-1">
+                                      <h3 className="mb-0">Music album app</h3>
+                                      <div className="subheading mb-3">React Native simple app</div>
+                                      <p>Simple react native app with albums and there amazon buy links. just Taylor Swift albums with there amazon buy links.</p>
+                                      <a href="https://github.com/AvichalSrivastava/musicReactNativeApp" target="_blank">FIND GIT CODE HERE -</a>
+                                     <a  href="https://kayasthchattingapp.herokuapp.com/" target="_blank">- Download the app</a>
+                                  </div>
+                                  <div className="flex-shrink-0"><span className="text-primary">React Native</span></div>
+                              </div>
+                              <div className="d-flex flex-column flex-md-row justify-content-between">
+                                  <div className="flex-grow-1">
+                                      <h3 className="mb-0">My Portfolio website</h3>
+                                      <div className="subheading mb-3">React with particle.js library for random motions (just what are you seeing on screen)</div>
+                                      <p>My personal website that are you currently watching.</p>
+                                      <a href="https://github.com/AvichalSrivastava/myPortfolio" target="_blank">FIND GIT CODE HERE -</a>
+                                  </div>
+                                  <div className="flex-shrink-0"><span className="text-primary">React and Particle.js</span></div>
+                              </div>
+                          </div>
+                      </section>
+                      
+                      <hr className="m-0" />
+                    <section className="resume-section" id="skills">
+                          <div className="resume-section-content">
+                              <h2 className="mb-5">Skills</h2>
+                              <div className="subheading mb-3">Programming Languages & Tools</div>
+                              <ul className="list-inline dev-icons">
+                              <div className="tech">
+                                {this.renderDev()}
+                              </div>
 
-          <Container fluid>
-          <Row>
-           <Col md="4" xs="4" className="col4Item">
-             <div className="profilePic" >
-              <img className="ppimg" src={profilePic} alt="Avatar"/>
-             </div>
-             <div className="tech">
-                  {this.renderDev()}
+                              </ul>
+                              <div className="subheading mb-3">Workflow</div>
+                              <ul className="fa-ul mb-0">
+                                  <li>
+                                      <span className="fa-li"><i className="fas fa-check"></i></span>
+                                      Mobile-First, Responsive Design
+                                  </li>
+                                  <li>
+                                      <span className="fa-li"><i className="fas fa-check"></i></span>
+                                      Cross Browser Testing & Debugging
+                                  </li>
+                                  <li>
+                                      <span className="fa-li"><i className="fas fa-check"></i></span>
+                                      Cross Functional Teams
+                                  </li>
+                                  <li>
+                                      <span className="fa-li"><i className="fas fa-check"></i></span>
+                                      Agile Development & Scrum
+                                  </li>
+                              </ul>
+                          </div>
+                      </section>
+                      <hr className="m-0" />
+                      <section className="resume-section" id="interests">
+                          <div className="resume-section-content">
+                              <h2 className="mb-5">Interests</h2>
+                              <p>Apart from being a software developer, I enjoy most of my time playing my guitar. In the winter, I am a</p>
+                              <a href="https://www.instagram.com/p/B4kHvJNHfiJ/?utm_source=ig_web_copy_link">watch my the performance</a>
+                              <p>I like A.I Gadgets. Also apart from these, i like explore places and trackings.</p>
+                              <p className="mb-0">When indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in Full stack world.</p>
+                          </div>
+                      </section>
+                      <hr className="m-0" />
+                    <section className="resume-section" id="awards">
+                    <div className="resume-section-content">
+                        <h2 className="mb-5">Awards & Certifications</h2>
+                        <ul className="fa-ul mb-0">
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                Google Analytics Certified Developer
+                            </li>
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                Mobile Web Specialist - Google Certification
+                            </li>
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                1
+                                <sup>st</sup>
+                                Place - University of Colorado Boulder - Emerging Tech Competition 2009
+                            </li>
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                1
+                                <sup>st</sup>
+                                Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
+                            </li>
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                2
+                                <sup>nd</sup>
+                                Place - University of Colorado Boulder - Emerging Tech Competition 2008
+                            </li>
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                1
+                                <sup>st</sup>
+                                Place - James Buchanan High School - Hackathon 2006
+                            </li>
+                            <li>
+                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
+                                3
+                                <sup>rd</sup>
+                                Place - James Buchanan High School - Hackathon 2005
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                  </div>
+                  <div> <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossOrigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossOrigin="anonymous"></script>
+        <script src="js/scripts.js"></script></div>
+                </div>
             </div>
-
-           </Col>
-           <Col md="8" xs="8" className="bg-orange col9Item" >
-              <div className="innercol9Item">
-                  <h1>Intro</h1>
-                  <p>What is a paragraph?
-Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.
-
-How do I decide what to put in a paragraph?
-Before you can begin to determine what the composition of a particular paragraph will be, you must first decide on an argument and a working thesis statement for your paper. What is the most important idea that you are trying to convey to your reader? The information in each paragraph must be related to that idea. In other words, your paragraphs should remind your reader that there is a recurrent relationship between your thesis and the information in each paragraph. A working thesis functions like a seed from which your paper, and your ideas, will grow. The whole process is an organic one—a natural progression from a seed to a full-blown paper where there are direct, familial relationships between all of the ideas in the paper.
-
-The decision about what to put into your paragraphs begins with the germination of a seed of ideas; this “germination process” is better known as brainstorming. There are many techniques for brainstorming; whichever one you choose, this stage of paragraph development cannot be skipped. Building paragraphs can be like building a skyscraper: there must be a well-planned foundation that supports what you are building. Any cracks, inconsistencies, or other corruptions of the foundation can cause your whole paper to crumble.
-
-So, let’s suppose that you have done some brainstorming to develop your thesis. What else should you keep in mind as you begin to create paragraphs? Every paragraph in a paper should be:
-
-Unified: All of the sentences in a single paragraph should be related to a single controlling idea (often expressed in the topic sentence of the paragraph).
-Clearly related to the thesis: The sentences should all refer to the central idea, or thesis, of the paper (Rosen and Behrens 119).
-Coherent: The sentences should be arranged in a logical manner and should follow a definite plan for development (Rosen and Behrens 119).
-Well-developed: Every idea discussed in the paragraph should be adequately explained and supported through evidence and details that work together to explain the paragraph’s controlling idea (Rosen and Behrens 119).
-How do I organize a paragraph?
-There are many different ways to organize a paragraph. The organization you choose will depend on the controlling idea of the paragraph. Below are a few possibilities for organization, with links to brief examples:
-
-Narration: Tell a story. Go chronologically, from start to finish. (See an example.)
-Description: Provide specific details about what something looks, smells, tastes, sounds, or feels like. Organize spatially, in order of appearance, or by topic. (See an example.)
-Process: Explain how something works, step by step. Perhaps follow a sequence—first, second, third. (See an example.)
-Classification: Separate into groups or explain the various parts of a topic. (See an example.)
-Illustration: Give examples and explain how those examples prove your point. (See the detailed example in the next section of this handout.)
-5-step process to paragraph development
-Let’s walk through a 5-step process for building a paragraph. For each step there is an explanation and example. Our example paragraph will be about slave spirituals, the original songs that African Americans created during slavery. The model paragraph uses illustration (giving examples) to prove its point.
-
-Step 1. Decide on a controlling idea and create a topic sentence
-Paragraph development begins with the formulation of the controlling idea. This idea directs the paragraph’s development. Often, the controlling idea of a paragraph will appear in the form of a topic sentence. In some cases, you may need more than one sentence to express a paragraph’s controlling idea. Here is the controlling idea for our “model paragraph,” expressed in a topic sentence:
-
-Model controlling idea and topic sentence — Slave spirituals often had hidden double meanings.
-Step 2. Explain the controlling idea
-Paragraph development continues with an expression of the rationale or the explanation that the writer gives for how the reader should interpret the information presented in the idea statement or topic sentence of the paragraph. The writer explains his/her thinking about the main topic, idea, or focus of the paragraph. Here’s the sentence that would follow the controlling idea about slave spirituals:
-
-Model explanation — On one level, spirituals referenced heaven, Jesus, and the soul; but on another level, the songs spoke about slave resistance.
-Step 3. Give an example (or multiple examples)
-Paragraph development progresses with the expression of some type of support or evidence for the idea and the explanation that came before it. The example serves as a sign or representation of the relationship established in the idea and explanation portions of the paragraph. Here are two examples that we could use to illustrate the double meanings in slave spirituals:
-
-Model example A — For example, according to Frederick Douglass, the song “O Canaan, Sweet Canaan” spoke of slaves’ longing for heaven, but it also expressed their desire to escape to the North. Careful listeners heard this second meaning in the following lyrics: “I don’t expect to stay / Much longer here. / Run to Jesus, shun the danger. / I don’t expect to stay.”
-Model example B — Slaves even used songs like “Steal Away to Jesus (at midnight)” to announce to other slaves the time and place of secret, forbidden meetings.
-Step 4. Explain the example(s)
-The next movement in paragraph development is an explanation of each example and its relevance to the topic sentence and rationale that were stated at the beginning of the paragraph. This explanation shows readers why you chose to use this/or these particular examples as evidence to support the major claim, or focus, in your paragraph.
-
-Continue the pattern of giving examples and explaining them until all points/examples that the writer deems necessary have been made and explained. NONE of your examples should be left unexplained. You might be able to explain the relationship between the example and the topic sentence in the same sentence which introduced the example. More often, however, you will need to explain that relationship in a separate sentence. Look at these explanations for the two examples in the slave spirituals paragraph:
-
-Model explanation for example A — When slaves sang this song, they could have been speaking of their departure from this life and their arrival in heaven; however, they also could have been describing their plans to leave the South and run, not to Jesus, but to the North.
-Model explanation for example B — [The relationship between example B and the main idea of the paragraph’s controlling idea is clear enough without adding another sentence to explain it.]
-Step 5. Complete the paragraph’s idea or transition into the next paragraph
-The final movement in paragraph development involves tying up the loose ends of the paragraph and reminding the reader of the relevance of the information in this paragraph to the main or controlling idea of the paper. At this point, you can remind your reader about the relevance of the information that you just discussed in the paragraph. You might feel more comfortable, however, simply transitioning your reader to the next development in the next paragraph. Here’s an example of a sentence that completes the slave spirituals paragraph:
-
-Model sentence for completing a paragraph — What whites heard as merely spiritual songs, slaves discerned as detailed messages. The hidden meanings in spirituals allowed slaves to sing what they could not say.
-Notice that the example and explanation steps of this 5-step process (steps 3 and 4) can be repeated as needed. The idea is that you continue to use this pattern until you have completely developed the main idea of the paragraph.
-
-Here is a look at the completed “model” paragraph:
-Slave spirituals often had hidden double meanings. On one level, spirituals referenced heaven, Jesus, and the soul, but on another level, the songs spoke about slave resistance. For example, according to Frederick Douglass, the song “O Canaan, Sweet Canaan” spoke of slaves’ longing for heaven, but it also expressed their desire to escape to the North. Careful listeners heard this second meaning in the following lyrics: “I don’t expect to stay / Much longer here. / Run to Jesus, shun the danger. / I don’t expect to stay.” When slaves sang this song, they could have been speaking of their departure from this life and their arrival in heaven; however, they also could have been describing their plans to leave the South and run, not to Jesus, but to the North. Slaves even used songs like “Steal Away to Jesus (at midnight)” to announce to other slaves the time and place of secret, forbidden meetings. What whites heard as merely spiritual songs, slaves discerned as detailed messages. The hidden meanings in spirituals allowed slaves to sing what they could not say.
-Troubleshooting paragraphs
-Problem: the paragraph has no topic sentence
-Imagine each paragraph as a sandwich. The real content of the sandwich—the meat or other filling—is in the middle. It includes all the evidence you need to make the point. But it gets kind of messy to eat a sandwich without any bread. Your readers don’t know what to do with all the evidence you’ve given them. So, the top slice of bread (the first sentence of the paragraph) explains the topic (or controlling idea) of the paragraph. And, the bottom slice (the last sentence of the paragraph) tells the reader how the paragraph relates to the broader argument. In the original and revised paragraphs below, notice how a topic sentence expressing the controlling idea tells the reader the point of all the evidence.
-
-Original paragraph
-Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas. If the fish are well-fed, they won’t bite humans.
-Revised paragraph
-Although most people consider piranhas to be quite dangerous, they are, for the most part, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas. If the fish are well-fed, they won’t bite humans.
-Once you have mastered the use of topic sentences, you may decide that the topic sentence for a particular paragraph really shouldn’t be the first sentence of the paragraph. This is fine—the topic sentence can actually go at the beginning, middle, or end of a paragraph; what’s important is that it is in there somewhere so that readers know what the main idea of the paragraph is and how it relates back to the thesis of your paper. Suppose that we wanted to start the piranha paragraph with a transition sentence—something that reminds the reader of what happened in the previous paragraph—rather than with the topic sentence. Let’s suppose that the previous paragraph was about all kinds of animals that people are afraid of, like sharks, snakes, and spiders. Our paragraph might look like this (the topic sentence is bold):
-
-Like sharks, snakes, and spiders, pirahnas are widely feared. Although most people consider piranhas to be quite dangerous, they are, for the most part, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas. If the fish are well-fed, they won’t bite humans.
-Problem: the paragraph has more than one controlling idea
-If a paragraph has more than one main idea, consider eliminating sentences that relate to the second idea, or split the paragraph into two or more paragraphs, each with only one main idea. Watch our short video on reverse outlining to learn a quick way to test whether your paragraphs are unified. In the following paragraph, the final two sentences branch off into a different topic; so, the revised paragraph eliminates them and concludes with a sentence that reminds the reader of the paragraph’s main idea.
-
-Original paragraph
-
-Although most people consider piranhas to be quite dangerous, they are, for the most part, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas. A number of South American groups eat piranhas. They fry or grill the fish and then serve them with coconut milk or tucupi, a sauce made from fermented manioc juices.
-Revised paragraph
-
-Although most people consider piranhas to be quite dangerous, they are, for the most part, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ first instinct is to flee, not attack. Their fear of humans makes sense. Far more piranhas are eaten by people than people are eaten by piranhas. If the fish are well-fed, they won’t bite humans.
-Problem: transitions are needed within the paragraph
-You are probably familiar with the idea that transitions may be needed between paragraphs or sections in a paper (see our handout on transitions). Sometimes they are also helpful within the body of a single paragraph. Within a paragraph, transitions are often single words or short phrases that help to establish relationships between ideas and to create a logical progression of those ideas in a paragraph. This is especially likely to be true within paragraphs that discuss multiple examples. Let’s take a look at a version of our piranha paragraph that uses transitions to orient the reader:
-
-Although most people consider piranhas to be quite dangerous, they are, except in two main situations, entirely harmless. Piranhas rarely feed on large animals; they eat smaller fish and aquatic plants. When confronted with humans, piranhas’ instinct is to flee, not attack. But there are two situations in which a piranha bite is likely. The first is when a frightened piranha is lifted out of the water—for example, if it has been caught in a fishing net. The second is when the water level in pools where piranhas are living falls too low. A large number of fish may be trapped in a single pool, and if they are hungry, they may attack anything that enters the water.
-In this example, you can see how the phrases “the first” and “the second” help the reader follow the organization of the ideas in the paragraph.
-
-Works consulted
-We consulted these works while writing this handout. This is not a comprehensive list of resources on the handout’s topic, and we encourage you to do your own research to find the latest publications on this topic. Please do not use this list as a model for the format of your own reference list, as it may not match the citation style you are using. For guidance on formatting citations, please see the UNC Libraries citation tutorial. We revise these tips periodically and welcome feedback.
-
-Lunsford, Andrea. The St. Martin’s Handbook, Annotated Instructor’s Edition. 6th Ed. New York: St. Martin’s, 2008.
-
-Rosen, Leonard and Laurence Behrens. The Allyn and Bacon Handbook, Annotated Instructor’s Edition. 4th Ed. Boston: Allyn and Bacon, 2000.</p>
-              </div>
-
-           </Col>
-          </Row>
-          </Container>
-          </div>
-
-      </div>
-    );
+        </div>
+        </div> 
+        );
   }
 }
 export default Body;

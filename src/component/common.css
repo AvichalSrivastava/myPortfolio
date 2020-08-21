@@ -1,26 +1,16 @@
-
-.header{
-  height: 100px;
-  width: 100%;
-  margin: 0px;
-  padding: 10px;
-  position: sticky;
-  color: #ffffff;
-  background: #F98866;
-  text-align: center;
-}
 .innercol9Item
 {
   height: fit-content;
   width: fit-content;
-  background-color: #ffffff;
   opacity: 0.6;
-  padding: 30px;
   border-radius: 30px;
   border: 20px;
 }
 .centerItem
 {
+  padding-right: 20%;
+  background: rgba(88, 86, 86, 0);
+  padding-left: 20%;
   float: none;
   display: grid;
 }
@@ -52,29 +42,14 @@
   margin-right: auto;
   width: 50%;
 }
-.col4Item
-{
-  padding: 50px 20px 20px 20px;
-  background: #80BD9E;
-}
-.col9Item
-{
-  width: 100%;
-  padding: 20px;
-  background : #FF420E;
-}
 .myCards
 {
   height: 80px;
   width: 80px;
 }
-.footer
+.Particle
 {
-  height: fit-content;
-  width: 100%;;
-  text-align: center;
-  padding: 60px;
-  flex: 1;
-  flex-direction: column;
-  background:#89DA59;
+  position: fixed !important;
+  height: 100%;
+  width: 100%;
 }
