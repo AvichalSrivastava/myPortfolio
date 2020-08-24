@@ -3,11 +3,15 @@ import './index.css';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import reducers  from './reducers';
 
+const _store = createStore(reducers);
 ReactDOM.render(
-  <div className='body'>
+  <Provider store={_store}>
     <App/>
-  </div>,
+  </Provider>,
   document.getElementById('root')
 );
 

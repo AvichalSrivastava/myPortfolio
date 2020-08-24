@@ -23,6 +23,10 @@ import "./newComm.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ParticleContainer from './ParticleContainer';
 import Manager from "../AndroidApps/Manager.apk";
+import AvichalSrivastava from "../AndroidApps/AvichalSrivastava.pdf";
+import ReactJsTyping from 'reactjs-typing-effect';
+import ContactMe from './ContactMe';
+import {connect} from 'react-redux';
 class Body extends Component
 {
   renderDev()
@@ -31,17 +35,10 @@ class Body extends Component
      const Items = dev.map(item => <Card img={item}/> );
      return(Items);
   }
-  componentDidMount () {
-    const script = document.createElement("script");
-
-    script.src = "https://use.typekit.net/foobar.js";
-    script.async = true;
-
-    document.body.appendChild(script);
-}
   
   render()
   {
+    
     return (
       <div>
         <div className="Particle">
@@ -61,10 +58,20 @@ class Body extends Component
                                   <span className="text-primary">Srivastava</span>
                               </h1>
                               <div className=" mb-5">
-                                  U-Block, DLF phase3, Gurugram ,8357849520
-                                  <a href="srivastava.svichal@gmail.com">, avichalsrivastava@gmail.com</a>
+                                  U-Block, DLF phase3, Gurugram ,<a href="tel:8357849520">8357849520</a>
+                                  <a href="mailto:srivastava.avichal@gmail.com?subject = Feedback&body = Message">, srivastava.avichal@gmail.com</a>
                               </div>
-                              <p className="lead mb-5">Proactive, talented communicator well-versed in all aspects of software development. Results-oriented with more than 1.5 years of experience in IT industry. Solidifies client relations and growth through improved workflows and enhanced features. I currently work as App developer but looking for a full stack field where i can sharpen my client as well as backend skills.</p>
+                              <p className="lead mb-5">
+                                  <div style={{ fontSize: 20, color: '#2196F3'}}>
+                                    <ReactJsTyping 
+                                        StringList={["Hello Visitor, Welcome to my Portfolio website. I'm Avichal, Innovative software engineer with more than 1.5 years of experience in IT industry. I can work on server as well as client both with react-native and express. Looking for a job where i can use my skills to develop best quality product"]
+                                        }
+                                        speed={700}/>
+                                  </div>
+                            </p>
+                            <p className="lead mb-5">
+                                <div><a href={AvichalSrivastava} download><span className="text-primary">Find My Resume</span></a></div>
+                            </p>
                               <div className="social-icons">
                                   <a className="social-icon" href="https://www.linkedin.com/in/avichalsrivastava/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
                                   <a className="social-icon" href="https://github.com/AvichalSrivastava" target="_blank"><i className="fab fa-github"></i></a>
@@ -118,7 +125,7 @@ class Body extends Component
                                       <div className="subheading mb-3">React Native simple app</div>
                                       <p>Simple react native app with albums and there amazon buy links. just Taylor Swift albums with there amazon buy links.</p>
                                       <a href="https://github.com/AvichalSrivastava/musicReactNativeApp" target="_blank">FIND GIT CODE HERE -</a>
-                                     <a  href="https://kayasthchattingapp.herokuapp.com/" target="_blank">- Download the app</a>
+                                     <a  href="#" download>- Download the app</a>
                                   </div>
                                   <div className="flex-shrink-0"><span className="text-primary">React Native</span></div>
                               </div>
@@ -179,46 +186,10 @@ class Body extends Component
                       <hr className="m-0" />
                     <section className="resume-section" id="awards">
                     <div className="resume-section-content">
-                        <h2 className="mb-5">Awards & Certifications</h2>
+                        <h2 className="mb-5">Contact Me</h2>
+                        <ContactMe/>
                         <ul className="fa-ul mb-0">
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                Google Analytics Certified Developer
-                            </li>
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                Mobile Web Specialist - Google Certification
-                            </li>
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                1
-                                <sup>st</sup>
-                                Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                            </li>
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                1
-                                <sup>st</sup>
-                                Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                            </li>
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                2
-                                <sup>nd</sup>
-                                Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                            </li>
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                1
-                                <sup>st</sup>
-                                Place - James Buchanan High School - Hackathon 2006
-                            </li>
-                            <li>
-                                <span className="fa-li"><i className="fas fa-trophy text-warning"></i></span>
-                                3
-                                <sup>rd</sup>
-                                Place - James Buchanan High School - Hackathon 2005
-                            </li>
+                            
                         </ul>
                     </div>
                 </section>
@@ -236,4 +207,13 @@ class Body extends Component
         );
   }
 }
-export default Body;
+
+const mapStateToProps = state =>
+{
+  const {mode}= state.Mode;
+  return({
+    mode
+  });
+};
+
+export default connect(mapStateToProps) (Body);

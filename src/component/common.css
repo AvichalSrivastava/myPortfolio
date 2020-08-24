@@ -53,3 +53,10 @@
   height: 100%;
   width: 100%;
 }
+.bgImg
+{
+  background-color: black;
+ background-repeat: no-repeat;
+ max-width: 100%;
+ height: auto;
+}
