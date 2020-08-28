@@ -88,7 +88,9 @@ class Body extends Component
                                   <div className="flex-grow-1">
                                       <h3 className="mb-0">Adda 52 Poker</h3>
                                       <div className="subheading mb-3">India's first and largest online Poker gaming app and website</div>
-                                      <span className="text-primary">Software Engineer</span>
+                                      <span className="text-primary">Software Engineer at
+                                      <a href="https://www.adda52.com/" target="_blank"> Adda52.com</a></span>
+                                      
                                   </div>
                                   <div className="flex-shrink-0"><span className="text-primary">Feb 2019 - Current</span></div>
                               </div>
@@ -133,7 +135,7 @@ class Body extends Component
                                   <div className="flex-grow-1">
                                       <h3 className="mb-0">My Portfolio website</h3>
                                       <div className="subheading mb-3">React with particle.js library for random motions (just what are you seeing on screen)</div>
-                                      <p>My personal website that are you currently watching.</p>
+                                      <p>My personal website that you are currently watching.</p>
                                       <a href="https://github.com/AvichalSrivastava/myPortfolio" target="_blank">FIND GIT CODE HERE -</a>
                                   </div>
                                   <div className="flex-shrink-0"><span className="text-primary">React and Particle.js</span></div>
@@ -177,9 +179,9 @@ class Body extends Component
                       <section className="resume-section" id="interests">
                           <div className="resume-section-content">
                               <h2 className="mb-5">Interests</h2>
-                              <p>Apart from being a software developer, I enjoy most of my time playing my guitar. In the winter, I am a</p>
-                              <a href="https://www.instagram.com/p/B4kHvJNHfiJ/?utm_source=ig_web_copy_link">watch my the performance</a>
-                              <p>I like A.I Gadgets. Also apart from these, i like explore places and trackings.</p>
+                              <p>Apart from being a software developer, I enjoy most of my time playing my guitar.</p>
+                              <p>Adda52 management team declared me "Full House" performer on a promotion video -<a href="https://www.instagram.com/p/B4kHvJNHfiJ/?utm_source=ig_web_copy_link"> Watch performance here</a></p>
+                              <p>I like A.I Gadgets. Also apart from these, i like exploring places and trackings.</p>
                               <p className="mb-0">When indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in Full stack world.</p>
                           </div>
                       </section>
